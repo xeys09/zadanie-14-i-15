@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Mechanika</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        .form-label {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .menu-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Ustawienie przycisków jeden pod drugim */
+            justify-content: center; /* Wyśrodkowanie przycisków w pionie */
+            align-items: flex-end; /* Wyrównanie do prawej strony */
+            height: 150px; /* Wysokość kontenera dla centrowania */
+            margin-left: auto; /* Wyrównanie do prawej strony */
+        }
+
+        .button-container button {
+            margin-bottom: 20px; /* Odstęp między przyciskami */
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .section-left {
+            width: 48%;
+        }
+
+        .section-right {
+            width: 48%;
+        }
+
+        .section-left td,
+        .section-right td {
+            padding: 5px 10px;
+        }
+
+        .section-right input,
+        .section-right textarea {
+            width: 100%;
+        }
+
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-container label {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .checkbox-container input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Formularz Mechanika</h2>
+
+        <form>
+            <table class="table-container">
+                <tr>
+                    <td class="section-left">
+                        <table>
+                            <tr>
+                                <td class="form-label" colspan="2"><label for="name">1. Podaj swoje imię:</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="text" id="name" name="name"></td>
+                            </tr>
+                            <tr>
+                                <td class="form-label" colspan="2"><label for="surname">2. Podaj swoje nazwisko:</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="text" id="surname" name="surname"></td>
+                            </tr>
+                            <tr>
+                                <td class="form-label" colspan="2"><label for="email">3. Podaj swój e-mail:</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="email" id="email" name="email"></td>
+                            </tr>
+                            <tr>
+                                <td class="form-label" colspan="2"><label for="phone">4. Podaj swój numer telefonu:</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="tel" id="phone" name="phone"></td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <td class="section-right">
+                        <table>
+                            <tr>
+                                <td class="form-label" colspan="2">5. Jaką szkołę ukończyłeś:</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-container">
+                                            <label for="podstawowa">Podstawowa</label>
+                                            <input type="checkbox" id="podstawowa" name="qualification[]" value="podstawowa">
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label for="srednia">Średnia</label>
+                                            <input type="checkbox" id="srednia" name="qualification[]" value="srednia">
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label for="wyzsze">Wyższe</label>
+                                            <input type="checkbox" id="wyzsze" name="qualification[]" value="wyzsze">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-label" colspan="2"><label for="experience">6. Ile masz lat doświadczenia:</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="text" id="experience" name="experience"></td>
+                            </tr>
+                            <tr>
+                                <td class="form-label" colspan="2"><label for="why">7. Dlaczego Ty?</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><textarea id="why" name="why" rows="4"></textarea></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="button-container">
+                <button type="reset">Reset</button>
+                <button type="submit">Zakończ</button>
+            </div>
+
+        </form>
+
+        <div class="menu-link">
+            <a href="menu_Pisarski.html" style="text-decoration: none; color: black; font-weight: bold;">Powrót do menu</a>
+        </div>
+    </div>
+    
+</body>
+
+</html>
